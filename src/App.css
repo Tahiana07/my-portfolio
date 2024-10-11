@@ -1,13 +1,83 @@
-.App {
+/*.App {
   text-align: center;
 }
 
 .App-logo {
   height: 40vmin;
   pointer-events: none;
+}*/
+html {
+  scroll-behavior: smooth;
 }
 
-@media (prefers-reduced-motion: no-preference) {
+section {
+  scroll-margin-top: 80px; 
+}
+
+.loading-body {
+  width: 100vw;
+  height: 100vh;
+  background-color: #022253;
+}
+
+/* Cube 3D Loader */
+.cube-loader {
+  width: 100px;
+  height: 100px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotateX(45deg) rotateY(45deg);
+  transform-style: preserve-3d;
+  animation: rotate 2s infinite linear;
+}
+
+.cube-loader div {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  background: rgba(0, 255, 255, 0.7);
+  border: 2px solid #fff;
+}
+
+.cube-loader .front  { transform: translateZ(50px); }
+.cube-loader .back   { transform: rotateY(180deg) translateZ(50px); }
+.cube-loader .left   { transform: rotateY(-90deg) translateZ(50px); }
+.cube-loader .right  { transform: rotateY(90deg) translateZ(50px); }
+.cube-loader .top    { transform: rotateX(90deg) translateZ(50px); }
+.cube-loader .bottom { transform: rotateX(-90deg) translateZ(50px); }
+
+@keyframes rotate {
+  from { transform: translate(-50%, -50%) rotateX(45deg) rotateY(45deg); }
+  to { transform: translate(-50%, -50%) rotateX(45deg) rotateY(405deg); }
+}
+
+/* Hide loader after content is loaded */
+.hidden {
+  display: none;
+}
+
+/* Style pour le bouton de retour à l'accueil */
+.scroll-to-top {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #fff;
+  color: #02255F;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 50px;
+  cursor: pointer;
+  font-size: 16px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease;
+  z-index: 2;
+}
+
+/*@media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
   }
@@ -35,4 +105,11 @@
   to {
     transform: rotate(360deg);
   }
+}
+*/
+
+@media screen and (max-width: 600px) {
+    section {
+      scroll-margin-top: 200px;
+    }
 }

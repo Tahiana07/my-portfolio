@@ -1,0 +1,10 @@
+.marge-droite {
+	display: flex;
+	justify-content: flex-end;
+	margin-right: 5%;
+}
+
+.nav-link-active {
+	border-bottom: 3px solid #426273;
+	font-weight: bold;
+}

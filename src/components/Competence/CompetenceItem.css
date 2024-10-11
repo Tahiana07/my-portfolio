@@ -1,0 +1,197 @@
+/* Conteneur principal */
+.work-experience-container {
+  text-align: center;
+  color: white;
+  padding: 20px;
+  /*background-color: #2e2e2e;*/
+}
+
+/* Conteneur de la timeline */
+.timeline-container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  position: relative;
+  margin-top: 10%;
+}
+
+/* Boîtes de gauche */
+.timeline-left {
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  margin-right: 2%;
+}
+
+/* Boîtes de droite */
+.timeline-right {
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-left: 2%;
+}
+
+/* Style des boîtes */
+.timeline-box {
+  background-color: #022253;
+  color: white;
+  padding: 15px;
+  margin-bottom: 80px;
+  width: 250px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  position: relative;
+}
+
+/* Alignement des boîtes */
+.timeline-box.left {
+  align-self: flex-end;
+  margin-top: 7%;
+}
+
+.timeline-box.left2 {
+  align-self: flex-end;
+  margin-top: -6%;
+}
+
+.timeline-box.right {
+  align-self: flex-start;
+  margin-top: -19%; /* Décalage vertical pour éviter qu'elles soient parallèles */
+}
+
+.timeline-box.right2 {
+  align-self: flex-start;
+  margin-top: -6%; /* Décalage vertical pour éviter qu'elles soient parallèles */
+}
+
+/* Ajout des lignes horizontales */
+.timeline-box.left::before {
+  content: '';
+  position: absolute;
+  right: -40px; /* Relier juste au cercle étoilé */
+  top: 50%;
+  width: 40px;
+  height: 2px;
+  background-color: #666;
+}
+
+.timeline-box.right::before {
+  content: '';
+  position: absolute;
+  left: -40px; /* Relier juste au cercle étoilé */
+  top: 50%;
+  width: 40px;
+  height: 2px;
+  background-color: #666;
+}
+
+.timeline-box.left2::before {
+  content: '';
+  position: absolute;
+  right: -40px; /* Relier juste au cercle étoilé */
+  top: 50%;
+  width: 40px;
+  height: 2px;
+  background-color: #666;
+}
+
+.timeline-box.right2::before {
+  content: '';
+  position: absolute;
+  left: -40px; /* Relier juste au cercle étoilé */
+  top: 50%;
+  width: 40px;
+  height: 2px;
+  background-color: #666;
+}
+
+/* Centre avec les étoiles */
+.timeline-center {
+  width: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  z-index: 1;
+}
+
+/* Cercles contenant l'étoile */
+.circle {
+  width: 40px;
+  height: 40px;
+  background-color: #333;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  margin-bottom: 110px; /* Augmenter pour espacer chaque étoile */
+  position: relative;
+  z-index: 1;
+}
+
+/* Ligne verticale reliant les cercles */
+.vertical-line {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 4px;
+  height: calc(100% - 110px); /* Arrêter la ligne après le dernier cercle étoilé */
+  background-color: #666;
+  z-index: 0;
+}
+
+/* Style de l'étoile */
+.star {
+  font-size: 18px;
+}
+
+/* Responsive Design */
+
+/* Pour les petits écrans (mobiles) */
+@media screen and (max-width: 768px) {
+  .timeline-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .timeline-left, .timeline-right {
+    width: 100%;
+    align-items: center;
+    margin: 0;
+  }
+
+  .timeline-box {
+    width: 90%;
+    margin-bottom: 30px;
+  }
+
+  .timeline-box.left::before, .timeline-box.right::before {
+    display: none; /* Supprimer les lignes horizontales sur mobile */
+  }
+
+  .timeline-center {
+    display: none; /* Supprimer la timeline centrale sur mobile */
+  }
+}
+
+/* Pour les tablettes */
+@media screen and (max-width: 1024px) {
+  .timeline-box {
+    width: 80%; /* Réduire la taille des boîtes */
+  }
+
+  .timeline-left, .timeline-right {
+    align-items: center;
+  }
+
+  .timeline-box.left::before, .timeline-box.right::before {
+    width: 30px; /* Réduire la longueur des lignes */
+  }
+
+  .timeline-box.left2::before, .timeline-box.right2::before {
+    width: 30px; /* Réduire la longueur des lignes */
+  }
+}

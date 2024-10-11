@@ -1,0 +1,147 @@
+/*.container-carousel {
+  background-color: #022253;
+}*/
+
+.container-carousel {
+  position: relative;
+  overflow: hidden;
+}
+
+.container-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: url("../../assets/images/background.jpg");
+  background-size: cover;
+  background-position: center;
+  opacity: 1;
+  z-index: 1;
+}
+
+.filter-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #000;
+  opacity: 0.12;
+  z-index: 1;
+}
+
+.zindex-apply {
+  position: relative;
+  z-index: 2;
+}
+
+.App {
+  text-align: center;
+  font-family: Arial, sans-serif;
+  margin-top: -50px;
+  z-index: 2;
+}
+
+/* Ajuster la largeur du slider pour qu'il soit centré et réactif */
+.slick-slider {
+  margin: 0 auto;
+  width: 100%;
+  z-index: 2;
+}
+
+.card-carousel {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 15px;
+  padding: 20px;
+  height: 60vh;
+  color: white; /* S'assurer que le texte est bien noir */
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease;
+  text-align: center;
+  overflow: hidden;
+  box-sizing: border-box;
+  z-index: 2;
+}
+
+.card-carousel:hover {
+  transform: scale(1.05);
+  z-index: 2;
+}
+
+/* Couleurs spécifiques pour chaque carte */
+.card-react {
+  background-color: #61DBFB;
+}
+
+.card-nodejs {
+  background-color: #68A063;
+}
+
+.card-python {
+  background-color: #FFD43B;
+}
+
+.card-css3 {
+  background-color: #264DE4;
+}
+
+/* S'assurer que les icônes s'affichent correctement */
+.card-icon {
+  margin-bottom: 20px;
+  z-index: 2;
+}
+
+.card-title {
+  font-size: 24px;
+  margin-bottom: 10px;
+  z-index: 2;
+}
+
+.card-description {
+  padding: 10px 10px 10px 10px;
+  font-size: 20px;
+  text-align: center;
+  z-index: 2;
+}
+
+/* Réglages pour les petits écrans */
+@media (max-width: 768px) {
+  .slick-slider {
+    width: 100%;
+  }
+
+  .card-carousel {
+    height: 40vh;
+    padding: 15px;
+  }
+
+  .card-title {
+    font-size: 20px;
+    z-index: 2;
+  }
+
+  .card-description {
+    font-size: 14px;
+    z-index: 2;
+  }
+}
+
+/* Réglages pour les très petits écrans */
+@media (max-width: 576px) {
+  .card-carousel {
+    height: 45vh;
+    padding: 10px;
+  }
+
+  .card-title {
+    font-size: 18px;
+  }
+
+  .card-description {
+    font-size: 12px;
+  }
+}

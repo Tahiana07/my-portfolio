@@ -1,0 +1,45 @@
+.container-timeline {
+  position: relative;
+	background-color: #022253;
+  z-index: 2;
+}
+
+.project-image {
+  margin-bottom: 15px;
+}
+
+.technos-used {
+  display: flex;
+  gap: 10px; /* Espace entre chaque techno */
+  margin-bottom: 15px;
+  flex-wrap: wrap; /* Permet de passer à la ligne si trop de technos */
+}
+
+.techno {
+  padding: 5px 10px;
+  background-color: #eee;
+  border-radius: 5px;
+  font-size: 0.9rem;
+  color: #333;
+}
+
+.project-links {
+  margin-top: 15px;
+}
+
+.project-links .btn {
+  padding: 8px 15px;
+  text-decoration: none;
+  color: white;
+  background-color: #007bff;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.project-links .btn-secondary {
+  background-color: #6c757d;
+}
+
+.project-links .btn:hover {
+  background-color: #0056b3;
+}

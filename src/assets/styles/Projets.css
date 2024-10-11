@@ -1,0 +1,21 @@
+.text-container {
+	display: flex;
+	position: relative;
+	justify-content: center;
+	margin-top: 2%;
+	background-color: #002253;
+	border-bottom: 3px solid #fff;
+	padding: 10px 0 10px 0;
+	z-index: 2;
+}
+
+.container-cards {
+	display: flex;
+	padding: 0% 5.5% 0% 5% ;
+}
+
+@media screen and (max-width:750px) {
+	.text-container {
+		margin-top: 10%;
+	}
+}
